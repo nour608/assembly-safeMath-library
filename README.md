@@ -23,9 +23,6 @@ This part prevents the overflow that would occur when dividing INT256_MIN by -1,
 
 If you are developing smart contracts and using assembly/Yul code, this SafeMath library will definitely assist you, especially with complex arithmetic operations. By ensuring overflow and underflow checks, it offers a reliable way to handle arithmetic in low-level assembly, crucial for maintaining contract integrity and security.
 
-## Tests
-
-I'm very lazy to write tests. :(
 
 ## Conclusion
 
