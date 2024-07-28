@@ -25,7 +25,7 @@ If you are developing smart contracts and using assembly/Yul code, this SafeMath
 
 ## Tests
 
-I'm very lazy to write tests right now. :)
+I'm very lazy to write tests. :(
 
 ## Conclusion
 
