@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-contract SafeMath {
+library SafeMath {
     // Custom errors
     error AdditionOverflow(int256 lhs, int256 rhs);
     error AdditionUnderflow(int256 lhs, int256 rhs);
@@ -13,7 +13,7 @@ contract SafeMath {
 
     /// @notice Returns lhs + rhs.
     /// @dev Reverts on overflow / underflow.
-    function add(int256 lhs, int256 rhs) public pure returns (int256 result) {
+    function add(int256 lhs, int256 rhs) internal pure returns (int256 result) {
         assembly {
             result := add(lhs, rhs)
             // Check for overflow when both inputs are positive
@@ -39,7 +39,7 @@ contract SafeMath {
 
     /// @notice Returns lhs - rhs.
     /// @dev Reverts on overflow / underflow.
-    function sub(int256 lhs, int256 rhs) public pure returns (int256 result) {
+    function sub(int256 lhs, int256 rhs) internal pure returns (int256 result) {
         assembly {
             result := sub(lhs, rhs)
             if and(sgt(lhs, 0), slt(rhs, 0)) {
@@ -64,7 +64,7 @@ contract SafeMath {
 
     /// @notice Returns lhs * rhs.
     /// @dev Reverts on overflow.
-    function mul(int256 lhs, int256 rhs) public pure returns (int256 result) {
+    function mul(int256 lhs, int256 rhs) internal pure returns (int256 result) {
         // Convert this to assembly
         assembly {
             // Check if either input is zero
@@ -89,7 +89,7 @@ contract SafeMath {
 
     /// @notice Returns lhs / rhs.
     /// @dev Reverts on division by zero and overflow.
-    function div(int256 lhs, int256 rhs) public pure returns (int256 result) {
+    function div(int256 lhs, int256 rhs) internal pure returns (int256 result) {
         assembly {
             // Check for division by zero or division of zero
             if or(iszero(rhs), iszero(lhs)) {
