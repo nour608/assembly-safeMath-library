@@ -4,7 +4,7 @@
 
 ## Contract Overview
 
-**The SafeMath contract includes four arithmetic functions (add, sub, mul, div) with overflow and underflow checks using assembly. Custom errors enhance readability and debugging.**
+**The SafeMath library includes four arithmetic functions (add, sub, mul, div) with overflow and underflow checks using assembly. Custom errors enhance readability and debugging.**
 
 ## Documentation
 
