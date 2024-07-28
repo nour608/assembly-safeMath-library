@@ -1,13 +1,10 @@
-## Foundry
+## Introduction
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**Since v0.8.0 Solidity supports overflow and underflow checks, inline assembly does not, necessitating a custom implementation.**
 
-Foundry consists of:
+## Contract Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+**The SafeMath contract includes four arithmetic functions (add, sub, mul, div) with overflow and underflow checks using assembly. Custom errors enhance readability and debugging.**
 
 ## Documentation
 
@@ -15,52 +12,6 @@ https://book.getfoundry.sh/
 
 ## Usage
 
-### Build
+## Conclusion
 
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+While this project demonstrates high code quality and rigorous testing, it has not been audited and should be used cautiously.
